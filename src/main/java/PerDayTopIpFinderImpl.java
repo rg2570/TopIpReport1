@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -32,9 +33,8 @@ public class PerDayTopIpFinderImpl implements PerDayTopIpFinder
                 topIp = ipCount.getKey();
             }
         }
-
-        return  Pair.With(topIp, maxCount);
-
+        Pair<String, Integer> listResult = new MutablePair<>(topIp, maxCount);
+        return listResult;
     }
 
 }
