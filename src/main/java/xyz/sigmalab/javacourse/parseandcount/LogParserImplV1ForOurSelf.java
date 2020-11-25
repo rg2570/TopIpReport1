@@ -1,3 +1,5 @@
+package xyz.sigmalab.javacourse.parseandcount;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,13 +8,13 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
 
-public class LogParserImpl implements LogParser {
+public class LogParserImplV1ForOurSelf implements LogParser {
 
     @Override
     public List<ParsedLog> parseFile(File file) throws IOException
     {
-        Path path = Paths.get("./" , "serverlog");
-        List<String> logFileLines = Files.readAllLines(path);
+        // Path path = Paths.get("./" , "serverlog");
+        List<String> logFileLines = Files.readAllLines(file.toPath());
         List<ParsedLog> dateAndIp = new ArrayList<ParsedLog>();
 
 
