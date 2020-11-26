@@ -1,3 +1,5 @@
+package xyz.sigmalab.javacourse.parseandcount;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -42,7 +44,7 @@ public class CountedIp {
 
     @Override
     public String toString() {
-        return "CountedIp{" +
+        return "xyz.sigmalab.javacourse.parseandcount.CountedIp{" +
                 "timeStamp=" + timeStamp +
                 ", ipAddress='" + ipAddress + '\'' +
                 ", ipCount=" + ipCount +
